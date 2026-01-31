@@ -4,7 +4,8 @@
     "name": "SZ 1.0",
     "category": "CPU",
     "compressionType": "Lossy",
-    "description": "Original SZ algorithm using curve-fitting prediction with separate outlier handling path. Uses flat, linear, or quadratic fitting.",
+    "status": "deprecated",
+    "description": "Original SZ algorithm using curve-fitting prediction with separate outlier handling path. Uses flat, linear, or quadratic fitting. DEPRECATED - use newer versions.",
     "pipeline": [
       {
         "name": "Data Linearization",
@@ -32,7 +33,13 @@
       }
     ],
     "usedIn": ["Scientific HPC"],
-    "tags": ["lossy", "scientific", "curve-fitting", "sz"]
+    "tags": ["lossy", "scientific", "curve-fitting", "sz"],
+    "capabilities": [
+      {
+        "name": "Adaptive Selection",
+        "description": "Selects best-fit curve (flat, linear, or quadratic) based on data characteristics per block"
+      }
+    ]
   },
   {
     "id": "sz-1.4",
@@ -64,7 +71,8 @@
         "note": "Combines dictionary coding with dual entropy coders"
       }
     ],
-    "github": "https://github.com/szcompressor/SZ",
+    "github": "https://github.com/szcompressor/SZ2",
+    "installation": "Install from https://github.com/szcompressor/SZ2. Set global variable 'withLinearRegression' to NO (default is YES). When using command line, include sz.config with withLinearRegression=NO, e.g., 'sz -z -f -c sz.config...'",
     "papers": [
       {
         "title": "Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization",
@@ -105,7 +113,7 @@
         "description": "Entropy coding"
       }
     ],
-    "github": "https://github.com/szcompressor/SZ",
+    "github": "https://github.com/szcompressor/SZ2",
     "papers": [
       {
         "title": "SZ 2.0",
@@ -114,7 +122,13 @@
       }
     ],
     "usedIn": ["Scientific HPC"],
-    "tags": ["lossy", "scientific", "adaptive", "sz"]
+    "tags": ["lossy", "scientific", "adaptive", "sz"],
+    "capabilities": [
+      {
+        "name": "Adaptive Selection",
+        "description": "Adaptive predictor selection per block between Lorenzo and linear regression"
+      }
+    ]
   },
   {
     "id": "sz3",
@@ -154,7 +168,13 @@
       }
     ],
     "usedIn": ["Scientific HPC", "Exascale computing"],
-    "tags": ["lossy", "scientific", "interpolation", "sz"]
+    "tags": ["lossy", "scientific", "interpolation", "sz"],
+    "capabilities": [
+      {
+        "name": "Adaptive Selection",
+        "description": "Auto-selection between multilevel Lorenzo and dynamic spline interpolation"
+      }
+    ]
   },
   {
     "id": "szauto",
@@ -180,6 +200,7 @@
         "description": "Entropy coding"
       }
     ],
+    "github": "https://github.com/szcompressor/SZauto",
     "papers": [
       {
         "title": "SZauto",
@@ -207,6 +228,7 @@
         "note": "Fast path for non-uniform blocks"
       }
     ],
+    "github": "https://github.com/szcompressor/SZx",
     "papers": [
       {
         "title": "SZx: Ultra-Fast Error-Bounded Lossy Compression",
@@ -221,7 +243,7 @@
     "name": "QoZ 1.0",
     "category": "CPU",
     "compressionType": "Lossy",
-    "description": "Quality-oriented compressor using multilevel interpolation with adaptive prediction selection for high-fidelity compression.",
+    "description": "Quality-oriented compressor using multilevel interpolation with adaptive prediction selection for high-fidelity compression. NOTE: QoZ/QoZ2 has been integrated into SZ3.0.",
     "pipeline": [
       {
         "module": "interpolation",
@@ -275,6 +297,7 @@
         "note": "Adaptive encoder selection"
       }
     ],
+    "github": "https://github.com/JLiu-1/FAZ",
     "papers": [
       {
         "title": "FAZ: Feature-Adaptive Lossy Compression",
@@ -282,7 +305,13 @@
       }
     ],
     "usedIn": ["Multi-modal scientific data"],
-    "tags": ["lossy", "scientific", "adaptive", "wavelet"]
+    "tags": ["lossy", "scientific", "adaptive", "wavelet"],
+    "capabilities": [
+      {
+        "name": "Adaptive Selection",
+        "description": "Feature-based adaptive selection between Lorenzo, QoZ interpolation, and wavelets (sym13, CDF9/7) with adaptive SPECK or Huffman encoding"
+      }
+    ]
   },
   {
     "id": "hpez",
@@ -315,7 +344,13 @@
       }
     ],
     "usedIn": ["Scientific HPC"],
-    "tags": ["lossy", "scientific", "auto-tuning"]
+    "tags": ["lossy", "scientific", "auto-tuning"],
+    "capabilities": [
+      {
+        "name": "Adaptive Selection",
+        "description": "Auto-tunes interpolation parameters (order, dimensionality, spline type) or Lorenzo for optimal quality"
+      }
+    ]
   },
   {
     "id": "hyz",
@@ -438,7 +473,13 @@
       }
     ],
     "usedIn": ["Scientific data with features of interest"],
-    "tags": ["hybrid", "scientific", "roi", "adaptive"]
+    "tags": ["hybrid", "scientific", "roi", "adaptive"],
+    "capabilities": [
+      {
+        "name": "RoI Support",
+        "description": "Peak detection to identify regions of interest, applying lossless compression to ROI and lossy to background"
+      }
+    ]
   },
   {
     "id": "zstd",
@@ -591,6 +632,7 @@
         "description": "Compact storage of quantized values"
       }
     ],
+    "github": "https://github.com/szcompressor/cuSZp/archive/refs/tags/cuSZp-V1.1.tar.gz",
     "papers": [
       {
         "title": "cuSZp: GPU-Accelerated Error-Bounded Lossy Compression",
@@ -628,6 +670,7 @@
         "note": "Uses decoupled lookback optimization"
       }
     ],
+    "github": "https://github.com/szcompressor/cuSZp/archive/refs/tags/cuSZp-V2.0.1.tar.gz",
     "papers": [
       {
         "title": "cuSZp2: GPU-Optimized Lossy Compression",
@@ -642,7 +685,7 @@
     "name": "Aatrox",
     "category": "GPU",
     "compressionType": "Lossy",
-    "description": "GPU compressor using quantization, delta coding, and bit-packing for efficient parallel compression.",
+    "description": "GPU compressor using quantization, delta coding, and bit-packing for efficient parallel compression. Part of cuSZp repository.",
     "pipeline": [
       {
         "module": "linear-quantization",
@@ -696,6 +739,8 @@
         "note": "Maintains quality for extreme values"
       }
     ],
+    "github": "https://github.com/szcompressor/cuszp",
+    "note": "Also known as cuSZp3. Use master branch.",
     "papers": [
       {
         "title": "VGC: Versatile GPU Compressor",
@@ -767,6 +812,8 @@
         "description": "Additional compression stage"
       }
     ],
+    "github": "https://github.com/szcompressor/cusz",
+    "note": "Integrated with cuSZ - use interpolation setting",
     "papers": [
       {
         "title": "cuSZ-i: GPU Interpolation-Based Compression",
@@ -801,6 +848,8 @@
         "optional": true
       }
     ],
+    "github": "https://github.com/szcompressor/cusz",
+    "note": "Branch of cuSZ. Also see SC snapshot at https://github.com/shixun404/cuSZ-Hi",
     "papers": [
       {
         "title": "cuSZ-Hi: High-Performance GPU Compression",
@@ -833,6 +882,8 @@
         "description": "Pattern-based encoding with codebook"
       }
     ],
+    "github": "https://github.com/szcompressor/FZ-GPU",
+    "note": "Also included in cuSZ",
     "papers": [
       {
         "title": "FZ-GPU: GPU-Accelerated Lossy Compressor",
@@ -861,6 +912,7 @@
         "note": "Enables partial decompression"
       }
     ],
+    "github": "https://github.com/szcompressor/IPComp",
     "papers": [
       {
         "title": "IPComp: Interpolation-Predictive GPU Compression",
@@ -1063,7 +1115,7 @@
   {
     "id": "zfp",
     "name": "ZFP",
-    "category": "GPU",
+    "category": "Mixed",
     "compressionType": "Lossy",
     "description": "Fixed-rate compressed floating-point arrays using block-floating-point transform, DCT with lifting scheme, and embedded coding. Processes 4^d blocks (padding if needed), with efficient zero-block encoding. Pipeline: blocking → block-floating-point → DCT → zigzag ordering → negabinary → bitshuffle → RLE. Encodes bitplanes until accuracy/bitrate requirements met.",
     "pipeline": [
@@ -1118,7 +1170,13 @@
       }
     ],
     "usedIn": ["Scientific visualization", "HPC", "GPU computing"],
-    "tags": ["lossy", "fixed-rate", "floating-point", "gpu", "scientific", "block-based"]
+    "tags": ["lossy", "fixed-rate", "floating-point", "gpu", "scientific", "block-based"],
+    "capabilities": [
+      {
+        "name": "Progressive Decompression",
+        "description": "Embedded coding with bitplane encoding allows progressive decoding by decoding bitplanes until accuracy/bitrate requirements are met"
+      }
+    ]
   },
   {
     "id": "sperr",
@@ -1153,6 +1211,186 @@
       }
     ],
     "usedIn": ["Scientific HPC", "Climate data", "Error-bounded compression"],
-    "tags": ["lossy", "scientific", "wavelet", "speck", "progressive", "error-bounded"]
+    "tags": ["lossy", "scientific", "wavelet", "speck", "progressive", "error-bounded"],
+    "capabilities": [
+      {
+        "name": "Progressive Decompression",
+        "description": "SPECK coding enables progressive quality refinement by decoding bitplanes incrementally"
+      }
+    ]
+  },
+  {
+    "id": "tthresh",
+    "name": "TTHRESH",
+    "category": "CPU",
+    "compressionType": "Lossy",
+    "description": "Tensor compression using Higher-Order Singular Value Decomposition (HOSVD) with bitplane truncation. Remaining significant bitplanes are losslessly compressed using RLE and ANS encoding for efficient storage of tensor data.",
+    "pipeline": [
+      {
+        "module": "tucker-decomposition",
+        "name": "HOSVD (Tucker Decomposition)",
+        "description": "Higher-order SVD for tensor factorization",
+        "note": "Decomposes multi-dimensional data into core tensor and factor matrices"
+      },
+      {
+        "name": "Bitplane Truncation",
+        "description": "Truncate least significant bitplanes based on error threshold",
+        "note": "Lossy step that removes low-importance bits"
+      },
+      {
+        "module": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "description": "RLE on remaining bitplanes",
+        "note": "Compress runs of zeros in truncated data"
+      },
+      {
+        "module": "ans-encoding",
+        "name": "ANS Encoding",
+        "description": "Entropy coding of RLE output",
+        "note": "Final lossless compression stage"
+      }
+    ],
+    "papers": [
+      {
+        "title": "TTHRESH: Tensor Compression for Multidimensional Visual Data",
+        "note": "HOSVD-based tensor compression with bitplane truncation"
+      }
+    ],
+    "usedIn": ["Tensor data", "Multi-dimensional scientific data", "Visual data"],
+    "tags": ["lossy", "tensor", "hosvd", "svd", "bitplane", "scientific"],
+    "capabilities": [
+      {
+        "name": "Progressive Decompression",
+        "description": "Bitplane truncation allows progressive quality refinement by decoding bitplanes incrementally"
+      }
+    ]
+  },
+  {
+    "id": "mdz",
+    "name": "MDZ",
+    "category": "CPU",
+    "compressionType": "Lossy",
+    "description": "Multi-dimensional lossy compressor using adaptive prediction and error-controlled quantization. Also known as MMD-SZ. Has been integrated into SZ3.",
+    "pipeline": [
+      {
+        "module": "lorenzo-predictor",
+        "name": "Multi-dimensional Prediction",
+        "description": "Adaptive multi-dimensional spatial prediction"
+      },
+      {
+        "module": "linear-quantization",
+        "name": "Quantization",
+        "description": "Error-controlled quantization"
+      },
+      {
+        "module": "huffman-encoding",
+        "name": "Huffman Encoding",
+        "description": "Entropy coding"
+      }
+    ],
+    "github": "https://github.com/szcompressor/MMD-SZ",
+    "note": "Has been integrated into SZ3",
+    "papers": [
+      {
+        "title": "MDZ: Multi-dimensional Lossy Compression",
+        "note": "Multi-dimensional optimization"
+      }
+    ],
+    "usedIn": ["Scientific HPC", "Multi-dimensional data"],
+    "tags": ["lossy", "scientific", "multi-dimensional", "sz"]
+  },
+  {
+    "id": "lscomp",
+    "name": "lsCOMP",
+    "category": "CPU",
+    "compressionType": "Lossy",
+    "description": "Large-scale lossy compressor optimized for scientific data compression at scale with adaptive prediction and error control.",
+    "pipeline": [
+      {
+        "module": "lorenzo-predictor",
+        "name": "Adaptive Prediction",
+        "description": "Large-scale optimized spatial prediction"
+      },
+      {
+        "module": "linear-quantization",
+        "name": "Quantization",
+        "description": "Error-controlled quantization"
+      },
+      {
+        "module": "huffman-encoding",
+        "name": "Huffman Encoding",
+        "description": "Entropy coding"
+      }
+    ],
+    "github": "https://github.com/szcompressor/lsCOMP",
+    "papers": [
+      {
+        "title": "lsCOMP: Large-scale Scientific Data Compression",
+        "note": "Optimized for large-scale compression"
+      }
+    ],
+    "usedIn": ["Large-scale scientific HPC"],
+    "tags": ["lossy", "scientific", "large-scale", "hpc"]
+  },
+  {
+    "id": "mgard",
+    "name": "MGARD",
+    "category": "Mixed",
+    "compressionType": "Lossy",
+    "description": "MultiGrid Adaptive Reduction of Data - a multilevel lossy compression technique based on multigrid methods. Supports CPU (MGARD-CPU), NVIDIA GPUs (MGARD-CUDA), and portable acceleration (MGARD-X for NVIDIA/AMD GPUs and CPUs). Offers progressive reconstruction, ROI preservation, and QoI preservation.",
+    "pipeline": [
+      {
+        "name": "Multilevel Decomposition",
+        "description": "Hierarchical decomposition using multigrid-based methods",
+        "note": "Supports multi-dimensional, single-dimensional, or hybrid decomposition modes"
+      },
+      {
+        "module": "linear-quantization",
+        "name": "Error-Controlled Quantization",
+        "description": "Quantize multilevel coefficients with error bounds"
+      },
+      {
+        "module": "huffman-encoding",
+        "name": "Huffman Encoding",
+        "description": "Parallel Huffman coding of quantized coefficients"
+      },
+      {
+        "name": "Lossless Post-Compression",
+        "description": "Optional Zstandard or LZ4 compression",
+        "optional": true,
+        "note": "Applied after Huffman encoding for additional compression"
+      }
+    ],
+    "github": "https://github.com/CODARcode/MGARD",
+    "papers": [
+      {
+        "title": "MGARD+: Optimizing Multilevel Methods for Error-bounded Scientific Data Reduction",
+        "authors": "Xin Liang et al.",
+        "year": 2021,
+        "note": "IEEE Transactions on Computers"
+      },
+      {
+        "title": "Multilevel Techniques for Compression and Reduction of Scientific Data—The Unstructured Case",
+        "authors": "Mark Ainsworth et al.",
+        "year": 2020,
+        "note": "SIAM Journal on Scientific Computing"
+      }
+    ],
+    "usedIn": ["Scientific HPC", "Exascale computing", "Progressive data retrieval"],
+    "tags": ["lossy", "scientific", "multilevel", "multigrid", "progressive", "roi", "qoi", "gpu"],
+    "capabilities": [
+      {
+        "name": "QoI Preservation",
+        "description": "MGARD-QOI preserves linear quantities of interest; MGARD-Lambda preserves non-linear QoIs with adaptive error bounds derived from QoI constraints"
+      },
+      {
+        "name": "RoI Support",
+        "description": "MGARD-ROI enables region-of-interest preservation with adaptive error control per region"
+      },
+      {
+        "name": "Progressive Decompression",
+        "description": "MGARD-DR/XDR provides fine-grain progressive data reconstruction and refactoring at multiple resolution levels"
+      }
+    ]
   }
 ]

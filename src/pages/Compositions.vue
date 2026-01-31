@@ -24,7 +24,11 @@ const filteredCompositions = computed(() => {
       c.name.toLowerCase().includes(query) ||
       c.description.toLowerCase().includes(query) ||
       c.tags.some(tag => tag.toLowerCase().includes(query)) ||
-      c.usedIn?.some(use => use.toLowerCase().includes(query))
+      c.usedIn?.some(use => use.toLowerCase().includes(query)) ||
+      c.capabilities?.some(cap =>
+        cap.name.toLowerCase().includes(query) ||
+        cap.description.toLowerCase().includes(query)
+      )
     );
   }
 
@@ -111,6 +115,25 @@ onMounted(() => {
             </div>
 
             <p class="card-text">{{ composition.description }}</p>
+
+            <!-- Capabilities -->
+            <div v-if="composition.capabilities && composition.capabilities.length > 0" class="mb-3">
+              <h6 class="text-muted mb-2">Capabilities:</h6>
+              <div class="d-flex flex-wrap gap-2">
+                <div
+                  v-for="(capability, idx) in composition.capabilities"
+                  :key="idx"
+                  class="capability-badge"
+                >
+                  <div class="badge bg-info text-dark px-3 py-2">
+                    <strong>{{ capability.name }}</strong>
+                    <div class="small mt-1" style="white-space: normal; max-width: 300px;">
+                      {{ capability.description }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- Pipeline Visualization -->
             <div class="mb-3">
@@ -206,5 +229,15 @@ onMounted(() => {
 
 .pipeline-stage .badge a:hover strong {
   text-decoration: underline;
+}
+
+.capability-badge .badge {
+  text-align: left;
+  font-weight: normal;
+}
+
+.capability-badge .badge strong {
+  display: block;
+  font-size: 0.9rem;
 }
 </style>

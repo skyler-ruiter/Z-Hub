@@ -146,6 +146,35 @@
     "tags": ["transform", "multi-resolution", "progressive", "adaptive"]
   },
   {
+    "id": "multilevel-decomposition",
+    "name": "Multilevel Decomposition",
+    "category": "Transformer",
+    "description": "Hierarchical decomposition based on multigrid methods that represents data at multiple levels of resolution. Creates a hierarchy of coefficients where each level captures different scales of variation in the data. Used in MGARD for adaptive reduction with error control.",
+    "features": [
+      "Hierarchical multi-resolution representation",
+      "Multigrid-based methodology",
+      "Supports multi-dimensional, single-dimensional, or hybrid modes",
+      "Progressive data refinement",
+      "Error-controlled at each level",
+      "Enables adaptive compression strategies"
+    ],
+    "papers": [
+      {
+        "title": "MGARD+: Optimizing Multilevel Methods for Error-bounded Scientific Data Reduction",
+        "authors": "Xin Liang et al.",
+        "year": 2021,
+        "note": "IEEE Transactions on Computers"
+      },
+      {
+        "title": "Multilevel Techniques for Compression and Reduction of Scientific Data—The Multivariate Case",
+        "authors": "Mark Ainsworth et al.",
+        "year": 2019,
+        "note": "SIAM Journal on Scientific Computing"
+      }
+    ],
+    "tags": ["transform", "multilevel", "multigrid", "hierarchical", "progressive", "scientific"]
+  },
+  {
     "id": "regression-predictor",
     "name": "Regression Predictor",
     "category": "Predictor",
