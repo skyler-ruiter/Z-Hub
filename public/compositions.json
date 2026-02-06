@@ -773,6 +773,12 @@
         "name": "Post-Quantization",
         "description": "Quantize prediction residuals",
         "note": "No additional error, lossless step"
+      },
+      {
+        "module": "huffman-encoding",
+        "name": "Huffman Encoding",
+        "description": "Lossless entropy coding",
+        "note": "No additional error, lossless step"
       }
     ],
     "github": "https://github.com/szcompressor/cuSZ",
