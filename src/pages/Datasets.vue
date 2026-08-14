@@ -276,7 +276,12 @@ onMounted(loadAll);
 
                     <!-- Links column -->
                     <td class="small">
-                      <div v-for="(link, idx) in dataset.links" :key="idx" class="text-center mb-2">
+                      <div
+                        v-for="(link, idx) in dataset.links"
+                        :key="idx"
+                        class="text-center mb-2"
+                        :class="{ 'mt-3': link.gapBefore }"
+                      >
                         <a :href="link.url" target="_blank" rel="noopener">{{ link.label }}</a>
                       </div>
                     </td>

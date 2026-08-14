@@ -15,12 +15,12 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL CESM-ATM raw-data-dir f32 3600 1800" }
     ],
     "links": [
-      { "label": "Dataset1 (raw)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-1800x3600.tar.gz" },
-      { "label": "Dataset1 (cleared)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-cleared-1800x3600.tar.gz" },
-      { "label": "Dataset2 (raw)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-26x1800x3600.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/template_data.txt" },
-      { "label": "Dataset1 property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-cleared-1800x3600-property.txt" },
-      { "label": "Dataset2 property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-26x1800x3600-property.txt" }
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/template_data.txt" },
+      { "label": "Dataset1 (raw)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-1800x3600.tar.gz" },
+      { "label": "Dataset1 (cleared)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-cleared-1800x3600.tar.gz" },
+      { "label": "Dataset1 property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-cleared-1800x3600-property.txt" },
+      { "label": "Dataset2 (raw)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-26x1800x3600.tar.gz", "gapBefore": true },
+      { "label": "Dataset2 property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/CESM-ATM/SDRBENCH-CESM-ATM-26x1800x3600-property.txt" }
     ]
   },
   {
@@ -43,15 +43,15 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL EXAALT raw-data-dir f32 2869440" }
     ],
     "links": [
-      { "label": "Dataset1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-EXAALT-2869440.tar.gz" },
-      { "label": "Metadata1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-EXAALT-2869440-template_data.txt" },
-      { "label": "Property1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-EXAALT-2869440-property.txt" },
-      { "label": "Dataset2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-exaalt-copper.tar.gz" },
-      { "label": "Metadata2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-exaalt-copper-template_data.txt" },
-      { "label": "Property2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-EXAALT-copper-property.txt" },
-      { "label": "Dataset3", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-exaalt-helium.tar.gz" },
-      { "label": "Metadata3", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-exaalt-helium-template_data.txt" },
-      { "label": "Property3", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAALT/SDRBENCH-EXAALT-helium-property.txt" }
+      { "label": "Dataset1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-2869440.tar.gz" },
+      { "label": "Metadata1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-2869440-template_data.txt" },
+      { "label": "Property1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-2869440-property.txt" },
+      { "label": "Dataset2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-copper.tar.gz", "gapBefore": true },
+      { "label": "Metadata2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-copper-template_data.txt" },
+      { "label": "Property2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-copper-property.txt" },
+      { "label": "Dataset3", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-helium.tar.gz", "gapBefore": true },
+      { "label": "Metadata3", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-helium-template_data.txt" },
+      { "label": "Property3", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAALT/SDRBENCH-EXAALT-helium-property.txt" }
     ]
   },
   {
@@ -69,9 +69,9 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL Hurricane raw-data-dir f32 500 500 100" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Hurricane-ISABEL/SDRBENCH-Hurricane-ISABEL-100x500x500.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Hurricane-ISABEL/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Hurricane-ISABEL/SDRBENCH-Hurricane-ISABEL-100x500x500-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Hurricane-ISABEL/SDRBENCH-Hurricane-ISABEL-100x500x500.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Hurricane-ISABEL/SDRBENCH-Hurricane-ISABEL-100x500x500-template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Hurricane-ISABEL/SDRBENCH-Hurricane-ISABEL-100x500x500-property.txt" }
     ]
   },
   {
@@ -89,12 +89,12 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL EXAFEL raw-data-dir f32 388 5837120" }
     ],
     "links": [
-      { "label": "Dataset1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/SDRBENCH-EXAFEL-10x32x185x388.tar.gz" },
-      { "label": "Dataset2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/SDRBENCH-EXAFEL-986x32x185x388.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/SDRBENCH-EXAFEL-986x32x185x388-property.txt" },
-      { "label": "Dataset3", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/SDRBENCH-EXAFEL-130x1480x1552.tar.gz" },
-      { "label": "Metadata3", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXAFEL/template_data-exafel-130x1480x1552.txt" }
+      { "label": "Dataset1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/SDRBENCH-EXAFEL-10x32x185x388.tar.gz" },
+      { "label": "Dataset2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/SDRBENCH-EXAFEL-986x32x185x388.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/SDRBENCH-EXAFEL-986x32x185x388-property.txt" },
+      { "label": "Dataset3", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/SDRBENCH-EXAFEL-130x1480x1552.tar.gz", "gapBefore": true },
+      { "label": "Metadata3", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXAFEL/template_data-exafel-130x1480x1552.txt" }
     ]
   },
   {
@@ -112,12 +112,12 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f ABS HACC raw-data-dir f32 1073726487" }
     ],
     "links": [
-      { "label": "Dataset1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/EXASKY-HACC-data-big-size.tar.gz" },
-      { "label": "Metadata1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/template_data_big-size.txt" },
-      { "label": "Property1", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/EXASKY-HACC-data-medium-size-property.txt" },
-      { "label": "Dataset2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/EXASKY-HACC-data-medium-size.tar.gz" },
-      { "label": "Metadata2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/template_data_medium-size.txt" },
-      { "label": "Property2", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/HACC/EXASKY-HACC-data-big-size-property.txt" }
+      { "label": "Dataset1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-big-size.tar.gz" },
+      { "label": "Metadata1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-big-size-template_data.txt" },
+      { "label": "Property1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-big-size-property.txt" },
+      { "label": "Dataset2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-medium-size.tar.gz", "gapBefore": true },
+      { "label": "Metadata2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-medium-size-template_data.txt" },
+      { "label": "Property2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/HACC/EXASKY-HACC-data-medium-size-property.txt" }
     ]
   },
   {
@@ -135,9 +135,9 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL NYX raw-data-dir f32 512 512 512" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/NYX/SDRBENCH-EXASKY-NYX-512x512x512.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/NYX/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/EXASKY/NYX/SDRBENCH-EXASKY-NYX-512x512x512-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/NYX/SDRBENCH-EXASKY-NYX-512x512x512.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/NYX/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/EXASKY/NYX/SDRBENCH-EXASKY-NYX-512x512x512-property.txt" }
     ]
   },
   {
@@ -154,9 +154,9 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -d REL NWCHEM raw-data-dir d64 102953248" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/NWChem/SDRBENCH-NWChem-dataset.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/NWChem/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/NWChem/SDRBENCH-NWChem-dataset-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/NWChem/SDRBENCH-NWChem-dataset.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/NWChem/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/NWChem/SDRBENCH-NWChem-dataset-property.txt" }
     ]
   },
   {
@@ -175,9 +175,10 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL SCALE-LETKF raw-data-dir f32 1200 1200 98" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/SCALE_LETKF/SDRBENCH-SCALE-98x1200x1200.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/SCALE_LETKF/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/SCALE_LETKF/SDRBENCH-SCALE-98x1200x1200-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/SCALE_LETKF/SDRBENCH-SCALE-98x1200x1200.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/SCALE_LETKF/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/SCALE_LETKF/SDRBENCH-SCALE-98x1200x1200-property.txt" },
+      { "label": "Dataset2 (log-scale)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/SCALE_LETKF/SDRBENCH-SCALE-98x1200x1200_log.tar.gz", "gapBefore": true }
     ]
   },
   {
@@ -196,9 +197,9 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL QMCPack raw-data-dir f32 69 69 33120" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/QMCPack/SDRBENCH-QMCPack.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/QMCPack/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/QMCPack/SDRBENCH-QMCPack-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/QMCPACK/SDRBENCH-QMCPack.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/QMCPACK/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/QMCPACK/SDRBENCH-QMCPACK-115x69x69x288-property.txt" }
     ]
   },
   {
@@ -217,12 +218,12 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -d REL Miranda raw-data-dir d64 384 384 256" }
     ],
     "links": [
-      { "label": "Small Dataset (256x384x384)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/SDRBENCH-Miranda-256x384x384.tar.gz" },
-      { "label": "Small Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/template_data-miranda-256x384x384.txt" },
-      { "label": "Small Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/SDRBENCH-Miranda-256x384x384-property.txt" },
-      { "label": "Big Dataset (3072x3072x3072)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/SDRBENCH-Miranda-3072x3072x3072.tar.gz" },
-      { "label": "Big Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/template_data-miranda-3072x3072x3072.txt" },
-      { "label": "Big Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/Miranda/SDRBENCH-Miranda-3072x3072x3072-property.txt" }
+      { "label": "Small Dataset (256x384x384)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/SDRBENCH-Miranda-256x384x384.tar.gz" },
+      { "label": "Small Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/template_data-miranda-256x384x384.txt" },
+      { "label": "Small Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/SDRBENCH-Miranda-256x384x384-property.txt" },
+      { "label": "Big Dataset (3072x3072x3072)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/SDRBENCH-Miranda-3072x3072x3072.tar.gz", "gapBefore": true },
+      { "label": "Big Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/template_data-miranda-3072x3072x3072.txt" },
+      { "label": "Big Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Miranda/SDRBENCH-Miranda-3072x3072x3072-property.txt" }
     ]
   },
   {
@@ -237,12 +238,33 @@
       { "tool": "SZ (Decompress)", "cmd": "sz -d -x -i stat_planar.1.1000E-03.field.d64 -s stat_planar.1.1000E-03.field.d64 -3 500 500 500 -a" },
       { "tool": "ZFP", "cmd": "zfp -d -3 500 500 500 -i stat_planar.1.1000E-03.field.d64 -z stat_planar.1.1000E-03.field.d64.zfp -o stat_planar.1.1000E-03.field.d64.zfp.out -a 1E-2 -s" },
       { "tool": "LibPressio", "cmd": "pressio -b compressor=$COMP -i stat_planar.1.1000E-03.field.d64 -d 500 -d 500 -d 500 -t double -o rel=1e-2 -m time -m size -M all" },
-      { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -f REL S3D raw-data-dir f32 500 500 500" }
+      { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -d REL S3D raw-data-dir f32 500 500 500" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/S3D/SDRBENCH-S3D.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/S3D/template.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/S3D/SDRBENCH-S3D-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/S3D/SDRBENCH-S3D.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/S3D/template.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/S3D/SDRBENCH-S3D-property.txt" }
+    ]
+  },
+  {
+    "name": "Basilisk-Turbulence",
+    "source": "http://basilisk.fr/ \nM. Xia, Y. Li, P. Jiao, B. Wang, X. Liang and H. Guo, \"Time-Varying Vector Field Compression with Preserved Critical Point Trajectories,\" 2026 IEEE 42nd International Conference on Data Engineering (ICDE), Montreal, QC, Canada, 2026, pp. 2235-2249, doi: 10.1109/ICDE65706.2026.00168",
+    "type": "2D decaying turbulence simulation",
+    "format": "4 fields, 3D\n 1501&times;1024&times;1024 & 1001&times;2048&times;2048\n u_1024&times;1024&times;1501Re10k.f32\n v_1024&times;1024&times;1501Re10k.f32\n u_2048&times;2048&times;1001Re10k.f32\n v_2048&times;2048&times;1001Re10k.f32\n Single precision\n Binary, little-endian",
+    "entropy": { "avg8": 7.36, "min8": 7.35, "max8": 7.38, "avg32": 26.45, "min32": 26.39, "max32": 26.53 },
+    "sizes": ["40 GB"],
+    "commands": [
+      { "tool": "SZ (Compress)", "cmd": "sz -f -z -i u_1024x1024x1501Re10k.f32 -M REL -R 1E-3 -3 1024 1024 1501" },
+      { "tool": "SZ (Decompress)", "cmd": "sz -f -x -i u_1024x1024x1501Re10k.f32 -s u_1024x1024x1501Re10k.f32 -3 1024 1024 1501 -a" },
+      { "tool": "ZFP", "cmd": "zfp -f -3 1024 1024 1501 -i u_1024x1024x1501Re10k.f32 -z u_1024x1024x1501Re10k.f32.zfp -o u_1024x1024x1501Re10k.f32.zfp.out -a 1E-3 -s" },
+      { "tool": "LibPressio", "cmd": "pressio -b compressor=$COMP -i u_1024x1024x1501Re10k.f32 -d 1024 -d 1024 -d 1501 -t float -o rel=1e-3 -m time -m size -M all" }
+    ],
+    "links": [
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Basilisk-Turbulence/SDRBENCH-Basilisk-Turbulence.tar.gz" },
+      { "label": "Metadata1", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Basilisk-Turbulence/metadata_1024x1024x1501Re10k.txt" },
+      { "label": "Metadata2", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Basilisk-Turbulence/metadata_2048x2048x1001Re10k.txt" },
+      { "label": "README", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Basilisk-Turbulence/README.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/Basilisk-Turbulence/SDRBENCH-Basilisk-Turbulence-property.txt" }
     ]
   },
   {
@@ -260,9 +282,9 @@
       { "note" : "(the files are stored in .bp format, you need to install ADIOS to read them)" }
     ],
     "links": [
-      { "label": "Dataset (Adios2)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/XGC/xgc.3d.tar.gz" },
-      { "label": "Dataset (binary)", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/XGC/xgc.zip" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/XGC/template_data.txt" }
+      { "label": "Dataset (Adios2)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/XGC/xgc.3d.tar.gz" },
+      { "label": "Dataset (binary)", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/XGC/xgc.zip" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/XGC/template_data.txt" }
     ]
   },
   {
@@ -281,8 +303,8 @@
       { "note" : "(the files are stored in .bp format, you need to install ADIOS to read them)" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/NSTX_GPI/nstx_data_ornl_demo.bp" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/NSTX_GPI/template_data.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/NSTX_GPI/nstx_data_ornl_demo.bp" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/NSTX_GPI/template_data.txt" }
     ]
   },
   {
@@ -300,9 +322,9 @@
       { "tool": "Z-checker-installer", "cmd": "./runZCCase.sh -d REL Brown-samples raw-data-dir d64 33554433" }
     ],
     "links": [
-      { "label": "Dataset", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/brown_synth/SDRBENCH-BROWN-33554433.tar.gz" },
-      { "label": "Metadata", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/brown_synth/template_data.txt" },
-      { "label": "Property", "url": "https://g-8d6b0.fd635.8443.data.globus.org/ds131.2/Data-Reduction-Repo/raw-data/brown_synth/SDRBENCH-BROWN-33554433-property.txt" }
+      { "label": "Dataset", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/brown_synth/SDRBENCH-BROWN-33554433.tar.gz" },
+      { "label": "Metadata", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/brown_synth/template_data.txt" },
+      { "label": "Property", "url": "https://g-d0cd3f.fd635.8443.data.globus.org/raw-data/brown_synth/SDRBENCH-BROWN-33554433-property.txt" }
     ]
   }
 ]
