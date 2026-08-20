@@ -1,54 +1,75 @@
 # Z-Hub
 
-Z-Hub is an online platform that integrates lossy compression modules, compositions, analysis, and datasets.
+Z-Hub is an open, machine-readable registry of scientific and general-purpose
+compression techniques. It separates reusable algorithm **modules** from concrete
+compressor **compositions**, and also catalogs ecosystem tools and benchmark datasets.
 
-## Recommended IDE Setup
+The site is a research index, not a benchmark leaderboard or a guarantee that every
+entry is correct. Records without an explicit `verification` block are unreviewed by
+default; follow their papers, repositories, and implementation links for authoritative
+details.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Machine-readable catalogs
 
-## Project Setup
+The static JSON files are intentionally usable without the Vue interface:
+
+- `public/modules.json` — general algorithm families and known implementations
+- `public/compositions.json` — concrete pipelines from software and literature
+- `public/ecosystem.json` — libraries, interfaces, integrations, and applications
+- `public/datasets.json` — community-submitted dataset metadata
+- `public/sdrbench-datasets.json` — SDRBench-oriented dataset metadata
+
+Their consistent JSON structure makes the catalogs suitable for search, knowledge graphs,
+reproducible tooling, and future research tools. Consumers should treat missing verification
+metadata as `unverified`/`low` and preserve links to primary sources.
+
+## Development
+
+Requires Node.js 18 or newer.
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
+Quality checks:
 
 ```sh
 npm run lint
+npm run build
 ```
 
-## Contribution
+The production base path defaults to `/Z-Hub/`. Override it for another deployment:
 
-### Dataset submission
+```sh
+VITE_BASE_PATH=/ npm run build
+```
 
-This site uses a GitHub Issues + Actions workflow to accept dataset submissions without a backend server:
+## Contributing
 
-- Click "Submit a dataset" on the Datasets page.
-- A prefilled GitHub Issue will open  in this repo.
-- A GitHub Action ingests issues labeled `dataset` and updates `public/datasets.json` via an automated PR.
-- The site reads `public/datasets.json` at runtime to display community datasets.
+Module and composition buttons open curated GitHub issue forms. Maintainers translate
+those proposals into schema-valid records because taxonomy and source mapping require
+review.
 
-Setup:
+Dataset submissions use a GitHub Issues + Actions workflow:
 
-- Ensure this repository is public and Pages is enabled.
-- Create `.env` with `VITE_GITHUB_REPO=owner/repo` and optionally set `base` in `vite.config.js` if deploying to a sub-path.
-- Keep `public/datasets.json` committed.
+1. “Submit a community dataset” opens the dataset issue form.
+2. The ingestion workflow parses issues labeled `dataset`.
+3. It opens or updates a pull request changing `public/datasets.json`.
+4. After maintainer review and merge, the Datasets page displays approved records from
+   that file at runtime. Records marked `example` remain as fixtures and are not displayed.
 
-Files:
+Submission buttons always target the canonical `guoxiliu/Z-Hub` repository, including
+when the site is built from a development fork. Submitted files remain externally hosted;
+Z-Hub stores links and metadata only.
 
-- `.github/ISSUE_TEMPLATE/dataset_submission.yml` – Issue form shown to submitters.
-- `.github/workflows/ingest-dataset-issues.yml` – Action to parse issues and open PRs.
-- `public/datasets.json` – Data file consumed by the site.
+## Attribution and rights
+
+Z-Hub summarizes factual and technical material in original wording and links readers to
+primary sources. Citations do not themselves grant permission to reproduce copyrighted
+expression, so contributions must not copy abstracts, documentation, figures, tables, or
+other substantial source text.
+
+The MIT license covers the repository's original software and original project-authored
+documentation. Third-party publications, software, datasets, names, and linked materials
+remain subject to their own licenses and terms.

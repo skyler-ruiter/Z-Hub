@@ -1,12 +1,16 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import PipelineStageBadge from '../components/PipelineStageBadge.vue';
+import { githubIssueUrl } from '../config';
+
+defineOptions({ name: 'CompositionsPage' });
 
 const route = useRoute();
 const compositions = ref([]);
 const searchQuery = ref('');
 const selectedCategory = ref('All');
+const submitCompositionUrl = githubIssueUrl('composition_submission.yml');
 
 // composition id -> active variant id ('default' or a composition.variants[].id)
 const activeVariantId = ref({});
@@ -168,7 +172,7 @@ onMounted(() => {
     <!-- Action Buttons -->
     <div class="d-flex justify-content-end mb-4">
       <a
-        href="https://github.com/skyler-ruiter/Z-Hub/issues/new?template=composition_submission.yml"
+        :href="submitCompositionUrl"
         target="_blank"
         rel="noopener"
         class="btn btn-primary"
@@ -314,6 +318,7 @@ onMounted(() => {
                 v-if="composition.github"
                 :href="composition.github"
                 target="_blank"
+                rel="noopener"
                 class="btn btn-sm btn-outline-dark me-2"
               >
                 <i class="bi bi-github"></i> View Implementation
@@ -322,6 +327,7 @@ onMounted(() => {
                 v-if="displayedReproduce(composition)"
                 :href="displayedReproduce(composition).url"
                 target="_blank"
+                rel="noopener"
                 class="btn btn-sm btn-outline-primary me-2"
               >
                 View FZ GPU Module Library Preset
@@ -330,6 +336,7 @@ onMounted(() => {
                 v-if="displayedFzAlgorithm(composition)"
                 :href="displayedFzAlgorithm(composition).url"
                 target="_blank"
+                rel="noopener"
                 class="btn btn-sm btn-outline-primary"
                 :title="`FZ CPU Module Library: ${displayedFzAlgorithm(composition).algorithm}`"
               >

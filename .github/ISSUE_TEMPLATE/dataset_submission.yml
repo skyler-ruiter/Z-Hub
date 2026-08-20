@@ -41,6 +41,21 @@ body:
       label: Tags
       description: Comma-separated tags.
       placeholder: climate, netCDF, float32
+  - type: input
+    id: license_url
+    attributes:
+      label: License or usage terms URL
+      description: Link to the provider's license, data-use policy, or repository terms.
+      placeholder: https://doi.org/... or https://example.org/data-license
+    validations:
+      required: true
+  - type: textarea
+    id: attribution
+    attributes:
+      label: Preferred citation or attribution
+      description: Citation, acknowledgement, or credit requested by the provider.
+    validations:
+      required: true
   - type: checkboxes
     id: confirmations
     attributes:
@@ -49,4 +64,6 @@ body:
         - label: I confirm I have rights to share these download links.
           required: true
         - label: I understand files are not stored in this repository; only links and metadata are listed.
+          required: true
+        - label: I wrote the description in my own words and supplied the provider's preferred attribution and usage terms.
           required: true

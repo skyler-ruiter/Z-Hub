@@ -24,20 +24,33 @@ jobs:
           script: |
             const issue = context.payload.issue
             const body = issue.body || ''
-            function getField(id, label){
-              const pattern = new RegExp(`(?<=^### ${label}\n)[\s\S]*?(?=\n### |$)`, 'm')
-              const m = body.match(pattern)
-              return m ? m[0].trim() : ''
+            const fields = new Map()
+            for (const section of body.split(/^### /m).slice(1)) {
+              const newline = section.indexOf('\n')
+              if (newline === -1) continue
+              fields.set(section.slice(0, newline).trim(), section.slice(newline + 1).trim())
             }
+            const getField = label => fields.get(label) || ''
+            const links = getField('Data URL(s)')
+              .split(/\s+/)
+              .filter(link => /^https:\/\//i.test(link))
             const rec = {
               id: issue.number,
-              name: getField('name', 'Dataset name') || issue.title.replace(/^Dataset:\s*/,'').trim(),
-              description: getField('description', 'Description'),
-              links: getField('links', 'Data URL(s)').split(/\s+/).filter(Boolean),
-              size: getField('size', 'Size'),
-              tags: getField('tags', 'Tags').split(/[,\s]+/).filter(Boolean),
+              status: 'approved',
+              name: getField('Dataset name') || issue.title.replace(/^Dataset:\s*/,'').trim(),
+              description: getField('Description'),
+              links,
+              size: getField('Size'),
+              tags: getField('Tags').split(/[,\s]+/).filter(Boolean),
+              license_url: getField('License or usage terms URL'),
+              attribution: getField('Preferred citation or attribution'),
               source_issue: issue.html_url,
               submitted_by: issue.user && issue.user.login
+            }
+            if (!rec.name || !rec.description || !rec.links.length ||
+                !/^https:\/\//i.test(rec.license_url) || !rec.attribution) {
+              core.setFailed('Name, description, an HTTPS data URL, HTTPS usage-terms URL, and attribution are required.')
+              return
             }
             core.setOutput('record', JSON.stringify(rec))
 
@@ -66,4 +79,4 @@ jobs:
           title: "Ingest dataset #${{ github.event.issue.number }}"
           body: "Automated update of public/datasets.json from dataset issue."
           branch: "ingest/dataset-${{ github.event.issue.number }}"
-          base: ${{ github.ref_name }}
+          base: ${{ github.event.repository.default_branch }}

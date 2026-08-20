@@ -4,7 +4,55 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z-Hub</title>
+    <meta name="description" content="Explore machine-readable scientific compression modules, complete compressor pipelines, implementations, and research datasets.">
+    <meta name="keywords" content="scientific data compression, lossy compression, lossless compression, HPC, compressor pipelines, SZ, ZFP, MGARD">
+    <meta property="og:title" content="Z-Hub — Scientific Compression Registry">
+    <meta property="og:description" content="An open registry of compression algorithms, implementations, compositions, and datasets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guoxiliu.github.io/Z-Hub/">
+    <link rel="canonical" href="https://guoxiliu.github.io/Z-Hub/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DataCatalog",
+        "name": "Z-Hub Scientific Compression Registry",
+        "description": "Machine-readable compression modules, concrete compressor pipelines, ecosystem tools, and research datasets.",
+        "url": "https://guoxiliu.github.io/Z-Hub/",
+        "dataset": [
+          {
+            "@type": "Dataset",
+            "name": "Z-Hub Compression Modules",
+            "description": "General compression algorithm families and known implementations.",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://guoxiliu.github.io/Z-Hub/modules.json"
+            }
+          },
+          {
+            "@type": "Dataset",
+            "name": "Z-Hub Compressor Compositions",
+            "description": "Concrete compression pipelines described in software and literature.",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://guoxiliu.github.io/Z-Hub/compositions.json"
+            }
+          },
+          {
+            "@type": "Dataset",
+            "name": "Z-Hub Compression Ecosystem",
+            "description": "Compression libraries, interfaces, integrations, and applications.",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://guoxiliu.github.io/Z-Hub/ecosystem.json"
+            }
+          }
+        ]
+      }
+    </script>
+    <title>Z-Hub — Scientific Compression Registry</title>
   </head>
   <body>
     <div id="app"></div>

@@ -1,6 +1,7 @@
 [
 {
     "id": 101,
+    "status": "example",
     "name": "Climate-ERA5-Subset",
     "description": "ERA5 2m temperature over Europe for 2018-01, hourly, 0.25° grid.",
     "links": [
@@ -13,6 +14,7 @@
 },
   {
     "id": 102,
+    "status": "example",
     "name": "CFD-ScalarField-512^3",
     "description": "Steady-state CFD scalar field snapshots at 512^3 resolution (10 timesteps).",
     "links": [
@@ -26,6 +28,7 @@
   },
   {
     "id": 103,
+    "status": "example",
     "name": "Seismic-3D-Volume",
     "description": "Synthetic seismic 3D cube for compression benchmarking (SEG-Y export included).",
     "links": [
@@ -38,6 +41,7 @@
   },
   {
     "id": 104,
+    "status": "example",
     "name": "Microscopy-EM-Stack",
     "description": "Electron microscopy tilt-series aligned stack (1024x1024x400).",
     "links": [
@@ -50,6 +54,7 @@
   },
   {
     "id": 105,
+    "status": "example",
     "name": "Weather-Radar-CAPPI",
     "description": "Composite reflectivity CAPPI volume for a severe weather day, 1 km grid.",
     "links": [

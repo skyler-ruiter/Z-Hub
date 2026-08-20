@@ -25,14 +25,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "delta-encoding",
@@ -78,14 +71,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/FZGPUModules/stage_diff.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "lorenzo-predictor",
@@ -180,14 +166,7 @@
         "url": "https://szcompressor.org/SZ3/modules/BlockwiseDecomposition.html",
         "variant": "blockwise, w/ regression fallback"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "paeth-predictor",
@@ -226,10 +205,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module drafted for the image/video codec expansion (see docs/image-video-codec-scoping.md, Phase 1a). Not yet cross-checked against a specific implementation."
     }
   },
@@ -272,10 +247,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module drafted for the image/video codec expansion, Phase 1b (see docs/image-video-codec-scoping.md). Needed by webp-lossy (not yet drafted — also blocked on the in-loop-filter open question) and, later, HEVC/AV1/H.264 in Phase 2."
     }
   },
@@ -318,10 +289,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module for Phase 2 (video codecs, see docs/image-video-codec-scoping.md). Uncontested — no existing Predictor fits a temporal/cross-frame predictor; all others operate within a single frame/array."
     }
   },
@@ -356,10 +323,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module (2026-07-20) for the lcp composition. Description sourced from the SIGMOD'25 paper's LCP-S section (fixed-size blocking, block size = 2×errorbound×p, no sorting/space-filling curve); LCP-T's temporal mode is a separate technique not modeled here."
     }
   },
@@ -392,10 +355,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module (2026-07-20) for the pastri composition."
     }
   },
@@ -449,14 +408,7 @@
         "url": "https://szcompressor.org/SZ3/modules/BlockwiseDecomposition.html",
         "variant": "blockwise fallback predictor"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "interpolation",
@@ -515,14 +467,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/SZ3/modules/InterpolationDecomposition.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "neural-network-prediction",
@@ -549,14 +494,7 @@
       }
     ],
     "referenceOnly": true,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "implicit-neural-representation",
@@ -588,10 +526,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_fourier_network; no specific implementation confirmed beyond that codec."
     }
   },
@@ -624,14 +558,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "dct-transform",
@@ -661,14 +588,7 @@
       }
     ],
     "referenceOnly": true,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "hadamard-transform",
@@ -708,10 +628,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module drafted for the image/video codec expansion, Phase 1b (see docs/image-video-codec-scoping.md). Kept separate from dct-transform: different basis functions (±1 square waves vs. cosines), matching the precedent of one module per mathematically distinct transform family (dct/wavelet/multilevel/svd)."
     }
   },
@@ -744,14 +660,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "svd-decomposition",
@@ -808,10 +717,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "renamed from tucker-decomposition and generalized to SVD, 2026-07-05; TZ compressor citation added 2026-07-15 (HPDC '26, DOI 10.1145/3806645.3807811)"
     }
   },
@@ -843,10 +748,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_random_projection; no specific implementation confirmed beyond that codec."
     }
   },
@@ -900,14 +801,7 @@
         "url": "https://szcompressor.org/SZ3/modules/ALGO_MGARD.html",
         "variant": "MGARD multigrid (MGARDx)"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "truncation",
@@ -945,14 +839,7 @@
         "lossy": true,
         "url": "https://szcompressor.org/SZ3/modules/BitTruncationQuantizer.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "stochastic-rounding",
@@ -983,10 +870,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_stochastic_rounding; no specific implementation confirmed beyond that codec."
     }
   },
@@ -1018,14 +901,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "quantizer",
@@ -1105,14 +981,7 @@
         "url": "https://szcompressor.org/SZ3/modules/QuadraticLevelQuantizer.html",
         "variant": "nonlinear levels (quadratic LUT, experimental)"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "linear-quantization",
@@ -1151,14 +1020,7 @@
         "lossy": true,
         "url": "https://szcompressor.org/SZ3/modules/LinearQuantizer.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "log-scale-quantization",
@@ -1189,10 +1051,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module (2026-07-20), requested directly rather than surfaced from a specific composition. Primary citation (G.711 companding) is from telecom/audio, not scientific HPC compression — flag if a more domain-specific citation is preferred; the technique itself is a legitimate general Quantizer distinct from linear-quantization."
     }
   },
@@ -1224,14 +1082,7 @@
       }
     ],
     "referenceOnly": true,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "tcms-mutator",
@@ -1261,14 +1112,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "zigzag-encoding",
@@ -1312,10 +1156,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module split from zigzag-ordering, 2026-07-07. FZGM's ZigzagStage was previously misassigned to zigzag-ordering (a distinct scan-order technique); corrected to this module."
     }
   },
@@ -1350,10 +1190,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "generalized from FZGM implementation card; negabinary origin paper is a best-effort, unverified citation"
     }
   },
@@ -1387,10 +1223,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "merged from dbefs-mutator (EFS) + dbesf-mutator (ESF), 2026-07-05"
     }
   },
@@ -1426,10 +1258,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module created 2026-07-13 from FZ CPU Module Library's catalog (FixedPointQuantizer page); no exact prior Z-Hub module matched."
     }
   },
@@ -1459,14 +1287,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "asinh-scaling",
@@ -1490,10 +1311,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_asinh; no dedicated paper found (a standard signed generalization of log-scaling), no specific implementation confirmed beyond that codec."
     }
   },
@@ -1526,10 +1343,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_uniform_noise; no specific implementation confirmed beyond that codec."
     }
   },
@@ -1561,14 +1374,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "block-floating-point",
@@ -1599,14 +1405,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "normalization",
@@ -1633,14 +1432,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "color-space-transform",
@@ -1670,10 +1462,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module drafted for the image/video codec expansion (see docs/image-video-codec-scoping.md, Phase 1a). Not yet cross-checked against a specific implementation."
     }
   },
@@ -1721,10 +1509,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "generalized from FZGM implementation card; MANS paper citation still pending (repo-level attribution only)"
     }
   },
@@ -1779,14 +1563,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/FZGPUModules/stage_bitshuffle.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "zigzag-ordering",
@@ -1818,10 +1595,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "FZGM's ZigzagStage implementation entry moved to zigzag-encoding, 2026-07-07 (it was misassigned here — see that module's notes)."
     }
   },
@@ -1853,14 +1626,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "tuple-shuffle",
@@ -1890,14 +1656,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "swizzle-reshape",
@@ -1921,10 +1680,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the technique behind numcodecs_wasm_swizzle_reshape; no dedicated paper (a general array-layout operation), no specific implementation confirmed beyond that codec."
     }
   },
@@ -1955,14 +1710,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "run-length-encoding",
@@ -2013,14 +1761,7 @@
         "url": "https://szcompressor.org/SZ3/modules/BitplaneRLEEncoder.html",
         "variant": "bitplane-scoped, raw fallback"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "repeat-elimination",
@@ -2089,10 +1830,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "merged from rze-reducer + rre-reducer, 2026-07-05"
     }
   },
@@ -2148,14 +1885,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/FZGPUModules/stage_bitpack.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "bitplane-packing",
@@ -2195,10 +1925,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module created 2026-07-13 from FZ CPU Module Library's catalog (BitplaneEncoder page); no exact prior Z-Hub module matched."
     }
   },
@@ -2230,14 +1956,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "dictionary-encoding",
@@ -2267,14 +1986,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "lz77",
@@ -2305,14 +2017,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "huffman-encoding",
@@ -2374,14 +2079,7 @@
         "url": "https://szcompressor.org/SZ3/modules/HuffmanEncoderV2.html",
         "variant": "V2 (MD-tuned bin distributions)"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "arithmetic-coding",
@@ -2420,14 +2118,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/SZ3/modules/ArithmeticEncoder.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "range-coding",
@@ -2454,14 +2145,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "ans-encoding",
@@ -2509,14 +2193,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/FZGPUModules/stage_ans.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "adaptive-binning",
@@ -2548,14 +2225,7 @@
       }
     ],
     "referenceOnly": false,
-    "implementations": [],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "implementations": []
   },
   {
     "id": "speck-coding",
@@ -2610,14 +2280,7 @@
         "lossy": false,
         "url": "https://szcompressor.org/SZ3/modules/SPERREncoder.html"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "spiht-coding",
@@ -2649,10 +2312,6 @@
     "referenceOnly": true,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added as the residual-layer coder used by EBCC (see the ebcc composition); no specific Z-Hub-tracked implementation confirmed beyond that."
     }
   },
@@ -2697,10 +2356,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New module drafted for the image/video codec expansion, Phase 1b (see docs/image-video-codec-scoping.md). Kept separate from speck-coding: speck-coding's own description is written narrowly around SPECK's set-partitioning mechanism; EBCOT's context-adaptive per-bit arithmetic coding over fixed code-blocks is a genuinely different algorithm, not a parameterization of SPECK. Marked lossless by the same reasoning as speck-coding: exact if run to full bitplane depth, lossy only if the rate-distortion step truncates it."
     }
   },
@@ -2750,10 +2405,6 @@
     "referenceOnly": false,
     "implementations": [],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "First module in the new Filter category (added 2026-07-19 for the image/video codec expansion, see docs/image-video-codec-scoping.md and docs/vocabulary.md's taxonomy note). Doesn't fit Transform (not decorrelating for coding) or Mutator (uses neighbors) — resolved via explicit user sign-off, not inferred from an existing module description the way earlier Phase 1b modules were."
     }
   }

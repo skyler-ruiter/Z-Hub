@@ -34,6 +34,7 @@ body:
         - Mutator
         - Shuffler
         - Encoder
+        - Filter
         - Not sure
     validations:
       required: true
@@ -75,3 +76,10 @@ body:
     id: notes
     attributes:
       label: Anything else the maintainer should know?
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Source and wording
+      options:
+        - label: I wrote the submitted description in my own words and identified the sources used for non-obvious technical claims.
+          required: true

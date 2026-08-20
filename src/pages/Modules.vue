@@ -1,6 +1,9 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
+import { githubIssueUrl } from '../config';
+
+defineOptions({ name: 'ModulesPage' });
 
 const route = useRoute();
 const modules = ref([]);
@@ -9,6 +12,22 @@ const loading = ref(false);
 const error = ref('');
 const searchQuery = ref('');
 const selectedCategory = ref('all');
+const submitModuleUrl = githubIssueUrl('module_submission.yml');
+
+function scrollToHash() {
+  if (!route.hash) return;
+  const targetId = decodeURIComponent(route.hash.slice(1));
+  setTimeout(() => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.classList.add('highlight-card');
+      setTimeout(() => element.classList.remove('highlight-card'), 2000);
+    }
+  }, 300);
+}
+
+watch(() => route.hash, scrollToHash);
 
 // module id -> [{ id, name }] of compositions whose pipeline (including
 // variant pipelines and per-stage adaptive-selection alternatives) uses it.
@@ -98,17 +117,7 @@ async function loadModules() {
 
   loading.value = false;
 
-  // Scroll to module if hash is present
-  if (route.hash) {
-    setTimeout(() => {
-      const element = document.querySelector(route.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        element.classList.add('highlight-card');
-        setTimeout(() => element.classList.remove('highlight-card'), 2000);
-      }
-    }, 300);
-  }
+  scrollToHash();
 }
 
 onMounted(() => {
@@ -215,7 +224,7 @@ function getCategoryColor(category) {
         <span v-else class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       </button>
       <a
-        href="https://github.com/skyler-ruiter/Z-Hub/issues/new?template=module_submission.yml"
+        :href="submitModuleUrl"
         target="_blank"
         rel="noopener"
         class="btn btn-primary"

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+defineOptions({ name: 'HomePage' });
+</script>
 
 <template>
   <div class="container mt-5">

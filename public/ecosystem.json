@@ -15,13 +15,6 @@
     "relatedTo": [
       "fz-module-library"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "FZModules: A Heterogeneous Computing Framework for Customizable Scientific Data Compression Pipelines",
@@ -48,13 +41,6 @@
     "relatedTo": [
       "fzgpumodules"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "SZ3: A Modular Framework for Composing Prediction-Based Error-Bounded Lossy Compressors",
@@ -75,13 +61,6 @@
     "category": "module-library",
     "platform": "CUDA / C++",
     "description": "Framework of composable, single-purpose components you chain into a pipeline. The conceptual origin of several Z-Hub modules (marked via origin: lc-framework) and used to compose the lossless compression pipelines. Has the ability to do genetic search over pipelines and produce a pareto front of optimal configurations.",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "LC Framework Overview",
@@ -100,10 +79,6 @@
     "description": "Meta's format-aware compression framework: takes a description of your data and builds a specialized compressor for it from a graph of composable components, aiming for compression ratios generic compressors can't reach while preserving high speed. Ships a core library plus tools that generate specialized compressors, all readable by one universal decompressor. Aimed at engineers working with large quantities of specialized datasets (e.g. AI workloads) who need fast processing pipelines.",
     "note": "Emerging; recently open-sourced by Meta.",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "openzl.org confirmed as a real, working homepage (2026-07-19); github repo (facebook/openzl) confirmed via that page's own links."
     },
     "papers": [
@@ -131,13 +106,6 @@
       "libpressio-tools",
       "libpressio-errorinjector"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "Productive and Performant Generic Lossy Data Compression with LibPressio",
@@ -162,13 +130,6 @@
     "relatedTo": [
       "libpressio"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "OptZConfig: Efficient Parallel Optimization of Lossy Compression Configuration",
@@ -204,10 +165,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "FRaZ predates QPET by ~4 years and shares Sheng Di / Franck Cappello as authors — added per maintainer's direct knowledge of the lineage, not independently verified via a citation in QPET's own paper."
     }
   },
@@ -223,10 +180,6 @@
       "libpressio"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Very early/small repo (2 commits, no README at time of research) — architecture description above is inferred from its poorjit dependency and Spack build flags, not from project documentation. Confirm with maintainer/upstream before treating as authoritative."
     }
   },
@@ -247,10 +200,6 @@
       "libpressio"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Represents 4 separate repos (github.com/robertu94/libpressio-adios1, libpressio_adios2, libpressio_dataset, libpressio_gfarm); grouped as one card rather than split four ways. libpressio_gfarm confirmed only via the GitHub org listing, not Spack."
     }
   },
@@ -266,10 +215,6 @@
       "libpressio"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Confirmed via the core libpressio README's list of companion repos; its own Spack package still marks it \"Pre-Release\"."
     }
   },
@@ -283,14 +228,7 @@
     "description": "A libpressio meta-compressor plugin that injects controlled noise into data for error-sensitivity studies — testing how downstream analysis tolerates compression-induced error, rather than compressing data itself.",
     "relatedTo": [
       "libpressio"
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "numcodecs",
@@ -300,13 +238,6 @@
     "category": "io-integration",
     "platform": "Python / Zarr",
     "description": "Python registry of buffer codecs and filters used by Zarr. Its codecs are ready-made compressors/filters; the numcodecs-wasm build can chain simple codec sequences.",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "supportedCompressors": [
       "Blosc",
       "Zstandard",
@@ -346,10 +277,6 @@
       "lc-framework"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "No paper found; each numcodecs_wasm_* sub-package is its own PyPI release rather than one monolithic project, so 'the' repo is a judgment call (docs site used as the canonical url instead of picking one sub-package's GitHub repo)."
     }
   },
@@ -371,10 +298,6 @@
       "libpressio"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "No formal peer-reviewed paper found for Blosc itself; description sourced from blosc.org and the c-blosc README/blog posts."
     }
   },
@@ -389,10 +312,6 @@
       "vortex"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added because the Pcodec paper (arXiv 2502.06112) compares against it directly but notes they could not get it to run without segfaults, using Vortex as a proxy instead."
     },
     "papers": [
@@ -417,10 +336,6 @@
       "btrblocks"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "No dedicated peer-reviewed paper found (cites the BtrBlocks paper as its compression-strategy basis); used as a stand-in for BtrBlocks in the Pcodec paper's benchmarks."
     }
   },
@@ -441,10 +356,6 @@
       "Uncompressed"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "No formal peer-reviewed paper found (Apache project, format spec is the primary source); added because the Pcodec paper benchmarks against it (Dictionary and Delta encodings, paired with Zstd)."
     }
   },
@@ -459,13 +370,6 @@
     "category": "io-integration",
     "platform": "C library (+ bindings)",
     "description": "Scientific data format and I/O library. Relevant to compression through its dynamically-loaded filter plugins, which carry compressors (SZ, ZFP, blosc, …) transparently on dataset read/write. An I/O carrier for compressors rather than a compressor itself.",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "supportedCompressors": [
       "SZ / SZ3",
       "ZFP",
@@ -498,10 +402,6 @@
     "platform": "C (+ Fortran/C++ bindings, MPI-IO)",
     "description": "High-performance parallel I/O library for the classic netCDF formats (CDF-1/2/5), giving MPI-based scientific applications collective, parallel read/write access to netCDF data. Unlike HDF5, PnetCDF has no filter-plugin architecture and does not support data compression itself — datasets needing both parallel I/O and compression typically go through NetCDF-4 (which is built on HDF5) instead.",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Included specifically to record that it does NOT carry compression, unlike the other io-integration entries here — worth stating explicitly since it's otherwise easy to assume from its HDF5-adjacent role."
     },
     "papers": [
@@ -526,10 +426,6 @@
       "numcodecs"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added alongside numcodecs/numcodecs-wasm — numcodecs' own description referenced Zarr as the format it backs, but Zarr itself had no entry of its own."
     },
     "papers": [
@@ -556,10 +452,6 @@
       "libpressio-io"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Added because libpressio-io wraps ADIOS1/2 readers/writers but ADIOS2 itself had no standalone entry."
     },
     "papers": [
@@ -588,10 +480,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Description now sourced from the 2023 arXiv paper (previously a maintainer-recollection placeholder); still unverified by the Z-Hub maintainer. Platform is a best-effort guess (Globus SDK is Python) — not confirmed against Ocelot's own source."
     }
   },
@@ -640,10 +528,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Category placement is a judgment call — see note field."
     }
   },
@@ -658,13 +542,6 @@
       "cuz-checker",
       "qcat"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "Z-checker: A framework for assessing lossy compression of scientific data",
@@ -685,13 +562,6 @@
     "relatedTo": [
       "z-checker"
     ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "papers": [
       {
         "title": "cuZ-Checker: A GPU-Based Ultra-Fast Assessment System for Lossy Compressions",
@@ -718,10 +588,6 @@
       "fz-module-library"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "No dedicated paper found (positioned by its own README as a lightweight Z-checker variant, not a separately published tool)."
     }
   },
@@ -737,10 +603,6 @@
       "fz-module-library"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "firstParty not set — team affiliation with the FZ project not confirmed, only inferred from scope (configures SZ/ZFP) and naming. relatedTo fz-module-library is a soft/inferred link for the same reason, not a confirmed integration. No papers found."
     }
   },
@@ -795,10 +657,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New 'application' category, first entries added 2026-07-20. compositions[] is a curated judgment call (compositions explicitly relevant to this domain per the report or their own usedIn tags), not an exhaustive list."
     }
   },
@@ -846,10 +704,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "compositions[] is a curated judgment call, not exhaustive — AMRIC/MultiReZ/TAC+ are named in the report as specialized AMR techniques but aren't tracked as their own Z-Hub compositions yet."
     }
   },
@@ -904,10 +758,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "EXAALT is SDRBench's molecular dynamics entry, filling the gap this note used to flag (an earlier pass left datasets[] empty since the report itself names MDDB, an aggregator/database effort, rather than a specific benchmark dataset)."
     }
   },
@@ -943,10 +793,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "compositions[] is a curated judgment call — the report names SZ2 explicitly as the current primary framework, linked to sz-2.0."
     }
   },
@@ -984,10 +830,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "compositions[] links sz3 as a stand-in for the report's generic 'SZ compressors via HDF5 filters' phrasing — not version-pinned in the source the way combustion's SZ2 mention is."
     }
   },
@@ -1031,10 +873,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "simulators[] omitted — light source facilities are experimental instruments, not simulation codes, so the field doesn't fit cleanly; LCLS/APS are named in the description instead."
     }
   },
@@ -1071,10 +909,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "datasets[] and relatedTo omitted — no SDRBench entry or dominant I/O library is named for this domain in the source; input is typically a GPU device pointer to a complex-number buffer rather than a file format."
     }
   },
@@ -1112,10 +946,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "datasets[] omitted — none of SDRBench's 14 datasets are seismic."
     }
   },
@@ -1148,10 +978,6 @@
       }
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "simulators[]/datasets[]/compositions[]/relatedTo all omitted — genuinely nothing to link. Parsl/Ray/TaskVine/Globus Compute are workflow orchestrators, not simulators, so they're named in the description rather than forced into simulators[]. No Z-Hub composition targets log/monitoring data, and no SDRBench dataset applies — this is a real, reported gap, not an oversight."
     }
   }

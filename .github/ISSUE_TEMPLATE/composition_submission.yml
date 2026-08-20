@@ -14,7 +14,7 @@ body:
 
         A maintainer will review this, map the pipeline stages onto Z-Hub's
         module ids and the composition schema (`docs/compositions.md` +
-        `docs/compositions.schema.json`), seed the verification/implementation
+        `docs/compositions.schema.json`), add review/implementation
         fields, and open the PR — you don't need to write JSON yourself.
   - type: input
     id: name
@@ -101,3 +101,10 @@ body:
     id: notes
     attributes:
       label: Anything else the maintainer should know?
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Source and wording
+      options:
+        - label: I wrote the submitted description in my own words and identified the sources used for non-obvious technical claims.
+          required: true

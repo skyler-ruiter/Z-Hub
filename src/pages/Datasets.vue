@@ -1,11 +1,17 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import { githubIssueUrl } from '../config';
+
+defineOptions({ name: 'DatasetsPage' });
 
 const route = useRoute();
 const sdrbenchDatasets = ref([]);
+const communityDatasets = ref([]);
 const loading = ref(false);
 const sdrError = ref('');
+const communityError = ref('');
+const submitDatasetUrl = githubIssueUrl('dataset_submission.yml');
 
 // Shared slugging logic with Ecosystem.vue's application-entry dataset links —
 // keep these in sync if either changes.
@@ -35,32 +41,33 @@ function scrollToHash() {
 
 watch(() => route.hash, scrollToHash);
 
-// Helper function to linkify URLs in text
-function linkifySource(text) {
-  if (!text) return text;
-
-  // Regular expression to detect URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-
-  // Check if text contains a URL
-  if (urlRegex.test(text)) {
-    // If the entire text is just a URL, return it as a link
-    const match = text.match(/^(https?:\/\/[^\s]+)$/);
-    if (match) {
-      return `<a href="${match[1]}" target="_blank" rel="noopener noreferrer">${match[1]}</a>`;
-    }
-
-    // Otherwise, replace URLs within the text
-    return text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+function safeHttpUrl(value) {
+  if (typeof value !== 'string') return null;
+  try {
+    const url = new URL(value);
+    return ['http:', 'https:'].includes(url.protocol) ? url.href : null;
+  } catch {
+    return null;
   }
+}
 
-  return text;
+function sourceUrl(text) {
+  return /^https?:\/\/\S+$/.test(text || '') ? safeHttpUrl(text) : null;
+}
+
+function displayFormat(text) {
+  return (text || '').replaceAll('&times;', '×').replace(/ x /g, ' × ');
+}
+
+function catalogUrl(filename) {
+  const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/g, '/');
+  return `${base}${filename}`;
 }
 
 async function loadSdrbenchDatasets() {
   sdrError.value = '';
   try {
-    const response = await fetch('/Z-Hub/sdrbench-datasets.json');
+    const response = await fetch(catalogUrl('sdrbench-datasets.json'), { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`Failed to load SDRBench datasets: ${response.statusText}`);
     }
@@ -74,9 +81,27 @@ async function loadSdrbenchDatasets() {
   }
 }
 
+async function loadCommunityDatasets() {
+  communityError.value = '';
+  try {
+    const response = await fetch(catalogUrl('datasets.json'), { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Failed to load community datasets: ${response.statusText}`);
+    }
+    const data = await response.json();
+    communityDatasets.value = Array.isArray(data)
+      ? data.filter((dataset) => dataset.status === 'approved')
+      : [];
+  } catch (err) {
+    console.error('Error loading community datasets:', err);
+    communityError.value = `Failed to load community datasets: ${err.message}`;
+    communityDatasets.value = [];
+  }
+}
+
 async function loadAll() {
   loading.value = true;
-  await loadSdrbenchDatasets();
+  await Promise.all([loadSdrbenchDatasets(), loadCommunityDatasets()]);
   loading.value = false;
 }
 
@@ -90,11 +115,14 @@ onMounted(loadAll);
       Explore datasets for testing, benchmarking, and experimentation.
     </p>
 
-    <div class="d-flex justify-content mb-3">
+    <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
       <button class="btn btn-outline-secondary" :disabled="loading" @click="loadAll">
         <span v-if="!loading"><i class="bi bi-arrow-clockwise me-1"></i>Reload lists</span>
         <span v-else class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       </button>
+      <a :href="submitDatasetUrl" target="_blank" rel="noopener" class="btn btn-primary">
+        Submit a community dataset
+      </a>
     </div>
 
     <div class="accordion" id="datasetsAccordion">
@@ -118,6 +146,12 @@ onMounted(loadAll);
           aria-labelledby="heading-sdr"
         >
           <div class="accordion-body">
+            <p class="small text-muted">
+              Dataset metadata and usage guidance are adapted from
+              <a href="https://sdrbench.github.io" target="_blank" rel="noopener">SDRBench</a>
+              for discovery in Z-Hub. Follow the original catalog and each provider's terms
+              for authoritative requirements and updates.
+            </p>
             <!-- Important Note about SDRBench Usage -->
             <div class="alert alert-info mb-4" role="alert">
               <h6 class="alert-heading fw-bold mb-3">Important: When publishing results from one or more datasets presented on this web page, please:</h6>
@@ -161,8 +195,14 @@ onMounted(loadAll);
                     <!-- Name column -->
                     <td>
                       <div class="fw-bold text-center">{{ dataset.name }}</div>
-                      <div class="text-center small text-muted mt-2 break-url" v-if="dataset.source">
-                        <em>Source: <br><span v-html="linkifySource(dataset.source)" style="white-space: pre-line;"></span></em>
+                      <div v-if="dataset.source" class="text-center small text-muted mt-2 break-url">
+                        <em>
+                          Source:<br>
+                          <a v-if="sourceUrl(dataset.source)" :href="sourceUrl(dataset.source)" target="_blank" rel="noopener noreferrer">
+                            {{ dataset.source }}
+                          </a>
+                          <span v-else style="white-space: pre-line">{{ dataset.source }}</span>
+                        </em>
                       </div>
                       <div class="text-center small text-muted mt-2" v-if="dataset.contact" style="white-space: pre-line;">
                         <em>Contact: {{ dataset.contact }}</em>
@@ -177,7 +217,7 @@ onMounted(loadAll);
 
                     <!-- Format column with entropy table -->
                     <td>
-                      <div class="text-center small" style="white-space: pre-line;" v-html="dataset.format.replace(/ x /g, ' &times; ')"></div>
+                      <div class="text-center small" style="white-space: pre-line">{{ displayFormat(dataset.format) }}</div>
 
                       <!-- Single entropy table -->
                       <div v-if="dataset.entropy" class="my-3">
@@ -394,6 +434,7 @@ onMounted(loadAll);
             aria-controls="collapse-community"
           >
             Community datasets
+            <span class="badge bg-secondary ms-2">{{ communityDatasets.length }}</span>
           </button>
         </h2>
         <div
@@ -402,8 +443,68 @@ onMounted(loadAll);
           aria-labelledby="heading-community"
         >
           <div class="accordion-body">
-            <div class="alert alert-info mb-0" role="alert">
+            <div v-if="communityError" class="alert alert-warning" role="alert">
+              {{ communityError }}
+            </div>
+            <div v-else-if="!communityDatasets.length" class="alert alert-info mb-0" role="alert">
               No community datasets yet.
+            </div>
+            <p v-else class="small text-muted">
+              Community submissions link to externally hosted data. Z-Hub records metadata but
+              does not host or independently endorse the files; review the source issue and usage
+              terms before downloading.
+            </p>
+            <div v-if="communityDatasets.length" class="row row-cols-1 row-cols-lg-2 g-3">
+              <div v-for="dataset in communityDatasets" :key="dataset.id" class="col">
+                <article class="card h-100 shadow-sm">
+                  <div class="card-body">
+                    <h3 class="h5 card-title">{{ dataset.name }}</h3>
+                    <p class="card-text">{{ dataset.description }}</p>
+                    <p v-if="dataset.size" class="small mb-2"><strong>Size:</strong> {{ dataset.size }}</p>
+                    <p v-if="dataset.attribution" class="small mb-2">
+                      <strong>Attribution:</strong> {{ dataset.attribution }}
+                    </p>
+                    <div class="mb-3">
+                      <span v-for="tag in dataset.tags" :key="tag" class="badge bg-light text-dark me-1 mb-1">
+                        {{ tag }}
+                      </span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a
+                        v-for="(link, index) in dataset.links"
+                        :key="link"
+                        :href="safeHttpUrl(link)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-sm btn-outline-primary"
+                      >
+                        Data link {{ index + 1 }}
+                      </a>
+                      <a
+                        v-if="safeHttpUrl(dataset.license_url)"
+                        :href="safeHttpUrl(dataset.license_url)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Usage terms
+                      </a>
+                      <a
+                        v-if="safeHttpUrl(dataset.source_issue)"
+                        :href="safeHttpUrl(dataset.source_issue)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Review submission
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Submitted by {{ dataset.submitted_by || 'an unknown contributor' }}
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>

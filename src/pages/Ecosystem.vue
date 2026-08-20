@@ -1,6 +1,9 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
+import { githubIssueUrl } from '../config';
+
+defineOptions({ name: 'EcosystemPage' });
 
 const route = useRoute();
 const entries = ref([]);
@@ -8,6 +11,22 @@ const loading = ref(false);
 const error = ref('');
 const searchQuery = ref('');
 const selectedCategory = ref('all');
+const suggestAdditionUrl = githubIssueUrl();
+
+function scrollToHash() {
+  if (!route.hash) return;
+  const targetId = decodeURIComponent(route.hash.slice(1));
+  setTimeout(() => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.classList.add('highlight-card');
+      setTimeout(() => element.classList.remove('highlight-card'), 2000);
+    }
+  }, 300);
+}
+
+watch(() => route.hash, scrollToHash);
 
 // Per-category presentation: a nice heading, a one-line description, and a
 // Bootstrap contextual color. Keep keys in sync with docs/ecosystem.schema.json.
@@ -140,16 +159,7 @@ async function loadEntries() {
 
   loading.value = false;
 
-  if (route.hash) {
-    setTimeout(() => {
-      const element = document.querySelector(route.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        element.classList.add('highlight-card');
-        setTimeout(() => element.classList.remove('highlight-card'), 2000);
-      }
-    }, 300);
-  }
+  scrollToHash();
 }
 
 onMounted(() => {
@@ -225,7 +235,7 @@ const categories = computed(() => {
         <span v-else class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       </button>
       <a
-        href="https://github.com/skyler-ruiter/Z-Hub/issues/new"
+        :href="suggestAdditionUrl"
         target="_blank"
         rel="noopener"
         class="btn btn-primary"

@@ -41,19 +41,15 @@
       "fast",
       "general-purpose"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "deflate",
     "name": "DEFLATE",
-    "aliases": ["zlib", "gzip"],
+    "aliases": [
+      "zlib",
+      "gzip"
+    ],
     "category": "CPU",
     "compressionType": "Lossless",
     "description": "Widely-used lossless compression combining LZ77 dictionary coding with Huffman entropy coding. zlib and gzip both wrap the same DEFLATE bitstream in different container formats (zlib: 2-byte header + Adler-32 checksum; gzip: richer header + CRC-32), so the compression pipeline itself is identical between them.",
@@ -103,14 +99,7 @@
       "entropy-coding",
       "standard"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "lzma",
@@ -152,14 +141,7 @@
       "entropy-coding",
       "high-ratio"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "lz4",
@@ -194,14 +176,7 @@
       "fast",
       "general-purpose"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "brotli",
@@ -244,14 +219,7 @@
       "entropy-coding",
       "general-purpose"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "bzip2",
@@ -293,14 +261,7 @@
       "block-sorting",
       "bwt"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "pcodec",
@@ -344,14 +305,7 @@
       "entropy-coding",
       "columnar"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "spdp",
@@ -405,10 +359,6 @@
     ],
     "status": "active",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "github link is a best-effort guess at Burtscher group's repo naming convention — not individually confirmed live."
     }
   },
@@ -467,10 +417,6 @@
     ],
     "status": "active",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Reuses the adm module (originally documented for MANS/ANS preprocessing) for the frame-of-reference concept rather than adding a near-duplicate module — see its note for the block-minimum-vs-mean distinction."
     }
   },
@@ -510,14 +456,7 @@
       "scientific",
       "floating-point"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "isabela",
@@ -565,14 +504,7 @@
       "sorting",
       "curve-fitting"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "sz-1.0",
@@ -637,14 +569,7 @@
         "name": "Adaptive Selection",
         "description": "Selects best-fit curve (flat, linear, or quadratic) based on data characteristics per block"
       }
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   },
   {
     "id": "sz-1.4",
@@ -714,14 +639,7 @@
       "hpc",
       "sz"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "sz-2.0",
@@ -826,13 +744,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_LORENZO_REG",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_LORENZO_REG.html"
@@ -954,13 +865,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "pipelineName": "Interpolation + Lorenzo (auto)",
     "fzAlgorithm": {
       "algorithm": "ALGO_INTERP_LORENZO",
@@ -1133,14 +1037,7 @@
       "lorenzo",
       "sz"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "qoz",
@@ -1230,13 +1127,6 @@
       "interpolation"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "capabilities": [
       {
         "name": "Adaptive Selection",
@@ -1321,14 +1211,7 @@
         "description": "Auto-tunes interpolation parameters (order, dimensionality, spline type) or Lorenzo for optimal quality"
       }
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "faz",
@@ -1452,14 +1335,7 @@
         "description": "Automatically tunes parameters for optimal compression based on data characteristics"
       }
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "ipcomp",
@@ -1524,14 +1400,7 @@
       "scientific",
       "progressive"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "sz-pm",
@@ -1588,14 +1457,7 @@
       "lz77",
       "sz"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "pastri",
@@ -1660,10 +1522,6 @@
       "sz"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New composition (2026-07-20), previously an empty stub in staging/notes.md. No confirmed public GitHub repo found — omitted rather than guessed. Pipeline built from the CLUSTER'18 paper's description of the SZ-Pastri prediction+quantization+encoding structure; not cross-checked against source code."
     }
   },
@@ -1722,13 +1580,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_SPERR",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_SPERR.html"
@@ -1803,13 +1654,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_SVD",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_SVD.html",
@@ -1858,14 +1702,7 @@
       "scientific",
       "hybrid"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "cliz",
@@ -1914,14 +1751,7 @@
         "description": "Detects land/ocean (or other) masks in climate grids during offline training, so masked-out cells don't skew prediction or error control"
       }
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "roibin-sz",
@@ -2003,14 +1833,7 @@
         "description": "Peak detection to identify regions of interest, applying lossless compression to ROI and lossy to background"
       }
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "mdz",
@@ -2111,13 +1934,6 @@
       "sz"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_BIOMD",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_BIOMD.html"
@@ -2198,10 +2014,6 @@
     ],
     "status": "active",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New composition created 2026-07-13 from FZ CPU Module Library's ALGO_BIOMDXTC catalog page."
     },
     "fzAlgorithm": {
@@ -2275,10 +2087,6 @@
       "hpc"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New composition (2026-07-20). No public GitHub repo found in search — omitted rather than guessed. Pipeline built from the SIGMOD'25 paper's description of LCP-S specifically; LCP-T (temporal mode) is only noted in capabilities since its algorithm wasn't detailed in the fetched source."
     }
   },
@@ -2331,10 +2139,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1a, see docs/image-video-codec-scoping.md). GitHub URL best-effort, not yet maintainer-verified."
     }
   },
@@ -2394,10 +2198,6 @@
       "palette"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1a, see docs/image-video-codec-scoping.md)."
     }
   },
@@ -2458,10 +2258,6 @@
       "image"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1a, see docs/image-video-codec-scoping.md). Predictor stage reuses lorenzo-predictor as the closest existing module — WebP's own mode set is its own thing, not literally Lorenzo; reconsider if a dedicated module is wanted later."
     }
   },
@@ -2555,10 +2351,6 @@
       "image"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1c, see docs/image-video-codec-scoping.md). Stage descriptions best-effort from RFC 6386, not yet cross-checked against libwebp source. First use of the new Filter category (in-loop-filter)."
     }
   },
@@ -2651,10 +2443,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1a, see docs/image-video-codec-scoping.md). errorModes intentionally omitted — JPEG is QP/quality-driven, not error-bounded; see the scoping doc's open question on reconciling errorModes with rate/quality-controlled codecs."
     }
   },
@@ -2762,10 +2550,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New image/video-domain entry (Phase 1b, see docs/image-video-codec-scoping.md). EBCOT/wavelet-stage descriptions are best-effort from the standard/EBCOT paper, not yet cross-checked against a specific implementation (e.g. OpenJPEG source)."
     }
   },
@@ -2822,10 +2606,6 @@
     ],
     "status": "active",
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "Two-layer structure (JPEG2000 base + DWT/SPIHT residual) sourced from the arXiv paper's description; not cross-checked against the spcl/EBCC source directly."
     }
   },
@@ -2930,10 +2710,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 (video) entry, see docs/image-video-codec-scoping.md. Deliberately omits directional-intra-prediction and in-loop-filter — MPEG-2 predates both; verified against the standard's own I-frame/no-deblocking design, not against a specific implementation."
     }
   },
@@ -3134,10 +2910,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 (video) entry, see docs/image-video-codec-scoping.md. First composition using the alternatives[] intra/inter prediction stage and a real CABAC/CAVLC profile variants[] branch. Not yet cross-checked against a specific implementation (e.g. OpenH264 source)."
     }
   },
@@ -3248,10 +3020,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 (video) entry, see docs/image-video-codec-scoping.md. github URL (videolan/x265 mirror) best-effort, not yet confirmed as canonical — x265's primary repo is hosted on Bitbucket."
     }
   },
@@ -3342,10 +3110,6 @@
       "image"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 entry, see docs/image-video-codec-scoping.md. Pipeline mirrors hevc's intra alternative exactly; relatedTo hevc rather than a variant since HEIC is an independently-named/adopted still-image format, not a build mode of the video codec (same reasoning as mdz-xtc vs. mdz)."
     }
   },
@@ -3447,10 +3211,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 (video) entry, see docs/image-video-codec-scoping.md. Not yet cross-checked against libvpx source."
     }
   },
@@ -3560,10 +3320,6 @@
       "standard"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 (video) entry, see docs/image-video-codec-scoping.md. First composition using range-coding (rather than arithmetic-coding) for its entropy stage — AV1's coder is documented as a multi-symbol range coder, distinct from H.264/HEVC's binary CABAC. Not yet cross-checked against libaom source."
     }
   },
@@ -3653,10 +3409,6 @@
       "image"
     ],
     "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
       "notes": "New Phase 2 entry, see docs/image-video-codec-scoping.md. Pipeline mirrors av1's intra alternative exactly; relatedTo av1 rather than a variant, same reasoning as heic/hevc."
     }
   },
@@ -3711,14 +3463,7 @@
       "fast",
       "sz"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "pfpl",
@@ -3793,13 +3538,6 @@
       "lc-framework"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/pfpl.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/pfpl.toml"
@@ -3892,13 +3630,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_ZFP",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_ZFP.html"
@@ -4016,13 +3747,6 @@
       }
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "fzAlgorithm": {
       "algorithm": "ALGO_MGARD",
       "url": "https://szcompressor.org/SZ3/modules/ALGO_MGARD.html",
@@ -4091,7 +3815,7 @@
     "description": "NVIDIA GPU-optimized lossless compressor using cascaded RLE-delta-bitpacking with multiple passes for maximum GPU efficiency.",
     "pipeline": [
       {
-        "module": "rle",
+        "module": "run-length-encoding",
         "name": "Run-Length Encoding",
         "description": "Compress repeated values"
       },
@@ -4123,14 +3847,7 @@
       "delta",
       "nvidia"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "cusz",
@@ -4203,13 +3920,6 @@
       "cusz"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/cusz.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/cusz.toml"
@@ -4281,14 +3991,7 @@
       "interpolation",
       "cusz"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "cusz-hi",
@@ -4409,13 +4112,6 @@
       "cusz"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/cusz_hi_cr.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/cusz_hi_cr.toml"
@@ -4600,13 +4296,6 @@
       "zero-elimination"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/fzgpu.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/fzgpu.toml"
@@ -4674,13 +4363,6 @@
       "cuszp"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/cuszp.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/cuszp.toml"
@@ -4749,13 +4431,6 @@
       "cuszp"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/cuszp2.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/cuszp2.toml"
@@ -4828,7 +4503,7 @@
         }
       },
       {
-        "module": "delta-coding",
+        "module": "delta-encoding",
         "name": "Delta Coding",
         "description": "Compute differences between values",
         "implementation": {
@@ -4867,14 +4542,7 @@
       "gpu",
       "delta"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "vgc",
@@ -4941,13 +4609,6 @@
       "cuszp3"
     ],
     "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    },
     "reproduce": {
       "preset": "examples/presets/cuszp3.toml",
       "url": "https://github.com/szcompressor/FZGPUModules/blob/main/examples/presets/cuszp3.toml"
@@ -5092,14 +4753,7 @@
       "neural-network",
       "ml"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "frsz2",
@@ -5156,14 +4810,7 @@
       "scientific",
       "floating-point"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "lscomp",
@@ -5179,14 +4826,14 @@
         "description": "Adaptive Scalar Quantization"
       },
       {
-        "module": "selective-pooling",
         "name": "Selective Pooling",
-        "description": "Selective Pooling"
+        "description": "Selective Pooling",
+        "details": "Composition-specific lsCOMP stage retained from the cited design. It is not mapped to a general Z-Hub module until its reusable technique boundary is documented."
       },
       {
-        "module": "bit-elimination",
         "name": "Bit Elimination",
-        "description": "Zero Bit Elimination"
+        "description": "Zero Bit Elimination",
+        "details": "Composition-specific lsCOMP stage retained from the cited design. It is not mapped to a general Z-Hub module until its relationship to existing bit-packing and leading-zero techniques is verified."
       }
     ],
     "github": "https://github.com/szcompressor/lsCOMP",
@@ -5207,14 +4854,7 @@
       "large-scale",
       "hpc"
     ],
-    "status": "active",
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    "status": "active"
   },
   {
     "id": "tz",
@@ -5265,13 +4905,6 @@
       "tensor",
       "scientific",
       "global-decomposition"
-    ],
-    "verification": {
-      "status": "unverified",
-      "confidence": "low",
-      "reviewed_by": null,
-      "reviewed_on": null,
-      "notes": ""
-    }
+    ]
   }
 ]
