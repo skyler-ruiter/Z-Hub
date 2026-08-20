@@ -26,12 +26,10 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: |
-          npm ci
-          python -m pip install jsonschema
+        run: npm ci
 
       - name: Validate catalogs and cross-references
-        run: python scripts/staging.py validate
+        run: python scripts/validate_catalogs.py
 
       - name: Lint
         run: npm run lint
