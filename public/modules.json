@@ -1466,53 +1466,6 @@
     }
   },
   {
-    "id": "adm",
-    "name": "Adaptive Data Mapping",
-    "category": "Mutator",
-    "description": "Adaptive Data Mapping (ADM): partitions a stream into fixed-size blocks, computes a per-block center (e.g. the block mean), and remaps each element to a compact code relative to that center — shrinking a wide integer stream (e.g. u16/u32) into a narrow symbol domain (e.g. 8-bit) before entropy coding. The narrower, more concentrated symbol distribution compresses substantially better under a subsequent entropy coder (e.g. ANS/Huffman) than the raw wide-integer stream.",
-    "features": [
-      "Per-block adaptive centering (e.g. per-block mean)",
-      "Remaps wide integer codes into a compact symbol domain",
-      "Improves downstream entropy-coder compression ratio",
-      "Lossless"
-    ],
-    "tags": [
-      "preprocessing",
-      "adaptive",
-      "representation",
-      "lossless"
-    ],
-    "origin": [
-      "MANS"
-    ],
-    "papers": [
-      {
-        "title": "MANS: Efficient and Portable ANS Encoding for Multi-Byte Integer Data on CPUs and GPUs",
-        "authors": "Huang, Yang, et al.",
-        "year": 2025,
-        "doi": "10.1145/3712285.3759825",
-        "note": "ADM stage as preprocessing for ANS entropy coding"
-      }
-    ],
-    "referenceOnly": false,
-    "implementations": [
-      {
-        "library": "FZ GPU Module Library",
-        "stage": "ADMStage",
-        "cardId": "fzgm-adm",
-        "algorithm": "adm",
-        "relationship": "direct-port",
-        "license": "BSD-3-Clause",
-        "hardware": "gpu",
-        "lossy": false,
-        "url": "https://szcompressor.org/FZGPUModules/stage_adm.html"
-      }
-    ],
-    "verification": {
-      "notes": "generalized from FZGM implementation card; MANS paper citation still pending (repo-level attribution only)"
-    }
-  },
-  {
     "id": "bit-shuffle",
     "name": "Bit Shuffle (Transpose)",
     "category": "Shuffler",

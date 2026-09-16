@@ -376,10 +376,9 @@
         "optional": true
       },
       {
-        "module": "adm",
         "name": "Frame-of-Reference (Patched)",
         "description": "Subtracts each block's minimum value so its elements fit in fewer bits, remapping them into a narrow, block-local code",
-        "note": "Uses the block minimum as the center rather than Adaptive Data Mapping's block mean, and patches out-of-range outliers ('exceptions') in separately at full width instead of forcing them into the narrow code — this patching is what makes it Patched Frame-of-Reference (PFOR)"
+        "note": "Uses the block minimum as the center, and patches out-of-range outliers ('exceptions') in separately at full width instead of forcing them into the narrow code — this patching is what makes it Patched Frame-of-Reference (PFOR)"
       },
       {
         "module": "bit-packing",
@@ -417,7 +416,7 @@
     ],
     "status": "active",
     "verification": {
-      "notes": "Reuses the adm module (originally documented for MANS/ANS preprocessing) for the frame-of-reference concept rather than adding a near-duplicate module — see its note for the block-minimum-vs-mean distinction."
+      "notes": "Frame-of-reference stage is documented inline (no general module) since it is specific to PFOR's block-minimum-plus-patched-exceptions scheme."
     }
   },
   {
